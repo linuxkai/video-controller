@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>配置规则</title>
+  <link href="../layui/css/layui.css" rel="stylesheet">
+  <!--light theme-->
+  <link id="layui-theme-css" rel="stylesheet">
+
+<body>
+  <div class="layui-container">
+    <!-- 页面主题选择 -->
+    <div class="layui-row layui-col-space20 layui-margin-1" style="text-align: right;">
+      <div class="layui-col-md12">
+        <a id="ID-change-theme-dropdown" style="font-weight: bold;">
+          <span>切换主题</span>
+          <i class="layui-icon layui-font-12 layui-icon-down"></i>
+        </a>
+      </div>
+    </div>
+    <!-- 跳过片头片尾表格 -->
+    <div class="layui-row layui-col-space20">
+      <div class="layui-col-md12">
+        <div class="layui-card">
+          <div class="layui-card-header layui-font-24">跳过片头片尾规则</div>
+          <div class="layui-card-body">
+            <table class="layui-hide" id="ID-skip-head-and-end-table" lay-filter="filter-skip-head-and-end-table">
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 跳过中间的段落表格 -->
+    <div class="layui-row layui-col-space20">
+      <div class="layui-col-md12">
+        <div class="layui-card">
+          <div class="layui-card-header layui-font-24">跳过中间的片段规则</div>
+          <div class="layui-card-body">
+            <table class="layui-hide" id="ID-skip-midsegment-table" lay-filter="filter-skip-midsegment-table"></table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 说明 -->
+    <div class="layui-row layui-col-space20">
+      <div class="layui-col-md12">
+        <div class="layui-card">
+          <div class="layui-card-header layui-font-24">说明</div>
+          <div class="layui-card-body">
+              1. 本插件现在仅支持腾讯视频，爱奇艺，优酷视频,555dy 跳过片头】片尾和跳过中间某一段时间。<br />
+              2. 暂时只支持以下域名:<br />
+              &nbsp;&nbsp;&nbsp;&nbsp; - v.qq.com<br />
+              &nbsp;&nbsp;&nbsp;&nbsp; - www.bilibili.com<br />
+              &nbsp;&nbsp;&nbsp;&nbsp; - www.iqiyi.com<br />
+              &nbsp;&nbsp;&nbsp;&nbsp; - v.youku.com<br />
+              &nbsp;&nbsp;&nbsp;&nbsp; - 555pian.com<br />
+              3. 本插件现在只是第一版，可能会有bug, 如有bug或者更好的建议，请发送邮箱到chk85106@gmail.com(请标注使用系统型号和chrome的版本)<br />
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <script type="text/html" id="toolbar">
+    <div class="layui-btn-container">
+      <button class="layui-btn" lay-event="saveRule">保存数据</button>
+      <button class="layui-btn" lay-event="addRule">添加规则</button>
+    </div>
+  </script>
+  <script src="../layui/js/layui.js"></script>
+  <script src="rule.js"></script>
+</body>
+
+</html>
