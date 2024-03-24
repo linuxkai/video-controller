@@ -95,8 +95,6 @@ async function get555filmVideoEle() {
         })
         if (videoEle) break;
     }
-
-    // videoEle.muted = true;
     return videoEle;
 }
 
@@ -108,8 +106,6 @@ async function timeupdateEvent(videoEle) {
     let endTime = 0;
     let midStartTime = 0;
     let midDuration = 0;
-
-    // console.log("get data res: " + JSON.stringify(res))
 
     if (res.skipHeadAndEndRules) {
         startTime = res.skipHeadAndEndRules.startMinute * 60 + parseInt(res.skipHeadAndEndRules.startSecond)
@@ -130,9 +126,7 @@ async function timeupdateEvent(videoEle) {
         if (nextBtn) nextBtn.click();
         setTimeout(() => {
             videoEle.currentTime = startTime;
-            console.log("准备触发全屏按钮......")
             fullscreenBtn = getFullscreenBtnEle();
-            console.log("fullscreenBtn: " + JSON.stringify(fullscreenBtn))
             if(fullscreenBtn) fullscreenBtn.click();
         }, 1000);
     }
@@ -143,12 +137,6 @@ async function timeupdateEvent(videoEle) {
             midDuration = list[i].duration;
 
             if (midStartTime == Math.floor(currentTime)) {
-                console.log("准备跳过视频中间的广告...")
-                console.log("midStartTime: " + midStartTime)
-                console.log("midDuration: " + midDuration)
-                console.log("midDuration: " + midDuration)
-                console.log("currentTime: " + Math.floor(currentTime))
-                console.log("midDuration + currentTime: " + parseInt(midDuration + currentTime))
                 videoEle.currentTime = parseInt(midDuration) + parseInt(currentTime)
                 break;
             }
