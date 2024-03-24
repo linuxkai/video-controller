@@ -26,8 +26,7 @@
 	"manifest_version": 3,
 	"name": "Video Controller",
 	"permissions": [
-		"storage",
-		"scripting"
+		"storage"
 	],
 	"sandbox": {
 		"pages": [

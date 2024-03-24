@@ -9,3 +9,6 @@
     - v.youku.com
     - 555pian.com
 3. 本插件现在只是第一版，可能会有bug, 如有bug或者更好的建议，请提问到issues(https://github.com/linuxkai/video-controller/issues)(请标注使用系统型号和chrome的版本)
+
+### 软件截图
+![配置界面截图](/images/Screenshots.png)
