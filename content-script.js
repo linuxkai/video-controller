@@ -2,8 +2,6 @@
 let hostname = window.location.hostname;
 let videoEle = null;
 
-console.log("from content script hostname: " + hostname)
-
 
 //由于网站域名总是变，暂时从代码里的title里打是否含有'555电影'来判断是不是这个网站
 let title = document.title
