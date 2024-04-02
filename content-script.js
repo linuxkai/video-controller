@@ -142,10 +142,6 @@ async function timeupdateEvent(videoEle) {
             }
         }
     }
-
-    // tmp code 
-    videoEle.muted = true;
-
 }
 
 
