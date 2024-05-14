@@ -47,7 +47,8 @@ function getNextEpBtnEle() {
         'www.bilibili.com': '.squirtle-video-next',
         'www.iqiyi.com': '.iqp-btn-next',
         'v.youku.com': '.kui-next-icon-0',
-        '555pian.com': '.art-control-next_episode'
+        '555pian.com': '.art-control-next_episode',
+        'www.miguvideo.com': 'next-btn'
     };
 
     if (hostname == '555pian.com') {
@@ -65,7 +66,8 @@ function getFullscreenBtnEle() {
         // 'www.bilibili.com': '.squirtle-video-next',
         'www.iqiyi.com': '.screen-small',
         'v.youku.com': '.kui-fullscreen-icon-0',
-        '555pian.com': '.art-control-fullscreen'
+        '555pian.com': '.art-control-fullscreen',
+        'www.miguvideo.com': '.zoom-btn'
     };
 
     if (hostname == '555pian.com') {
