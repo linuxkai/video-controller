@@ -70,14 +70,14 @@ window.addEventListener('message', function (e) {  // 监听 message 事件
 				{
 					field: 'domain',
 					title: "域名",
-					width: 400,
+					width: '30%',
 					edit: 'text',
 					rowspan: 2
 				},
 				{
 					field: 'startDuration',
 					title: "片头时间",
-					width: 300,
+					width: '20%',
 					align: "center",
 					edit: 'text',
 					colspan: 2,
@@ -85,7 +85,7 @@ window.addEventListener('message', function (e) {  // 监听 message 事件
 				{
 					field: 'endDuration',
 					title: "片尾时间",
-					width: 300,
+					width: '20%',
 					align: "center",
 					edit: 'text',
 					colspan: 2,
@@ -93,7 +93,7 @@ window.addEventListener('message', function (e) {  // 监听 message 事件
 				{
 					field: 'isSkip',
 					title: "是否启用",
-					width: 100,
+					width: '10%',
 					rowspan: 2,
 					templet: '<div><input type="checkbox" name="isSkip" value="{{= d.isSkip }}" title="是|否" lay-skin="switch" lay-filter="templet-skip-head-and-end-status" {{= d.isSkip == 1 ? "checked" : "" }}></div>'
 				},
@@ -108,7 +108,7 @@ window.addEventListener('message', function (e) {  // 监听 message 事件
 				{
 					field: 'startMinute',
 					title: "分钟",
-					width: 150,
+					width: '10%',
 					align: "center",
 					edit: 'text',
 					templet: '<div class="table-number-cell">{{d.startMinute}}</div>'
@@ -116,7 +116,7 @@ window.addEventListener('message', function (e) {  // 监听 message 事件
 				{
 					field: 'startSecond',
 					title: "秒",
-					width: 150,
+					width: '10%',
 					align: "center",
 					edit: 'text',
 					templet: '<div class="table-number-cell">{{d.startSecond}}</div>'
@@ -124,7 +124,7 @@ window.addEventListener('message', function (e) {  // 监听 message 事件
 				{
 					field: 'endMinute',
 					title: "分钟",
-					width: 150,
+					width: '10%',
 					align: "center",
 					edit: 'text',
 					templet: '<div class="table-number-cell">{{d.endMinute}}</div>'
@@ -132,7 +132,7 @@ window.addEventListener('message', function (e) {  // 监听 message 事件
 				{
 					field: 'endSecond',
 					title: "秒",
-					width: 150,
+					width: '10%',
 					align: "center",
 					edit: 'text',
 					templet: '<div class="table-number-cell">{{d.endSecond}}</div>'
@@ -244,14 +244,14 @@ window.addEventListener('message', function (e) {  // 监听 message 事件
 				{
 					field: 'domain',
 					title: "域名",
-					width: 400,
+					width: '30%',
 					edit: 'text',
 					rowspan: 2
 				},
 				{
 					field: 'startDuration',
 					title: "起始时间",
-					width: 300,
+					width: '30%',
 					align: "center",
 					edit: 'text',
 					colspan: 2,
@@ -259,7 +259,7 @@ window.addEventListener('message', function (e) {  // 监听 message 事件
 				{
 					field: 'duration',
 					title: "跳过时长 (单位:秒)",
-					width: 300,
+					width: '20%',
 					align: "center",
 					edit: 'text',
 					rowspan: 2,
@@ -267,7 +267,7 @@ window.addEventListener('message', function (e) {  // 监听 message 事件
 				{
 					field: 'isSkip',
 					title: "是否启用",
-					width: 100,
+					width: '10%',
 					rowspan: 2,
 					templet: '<div><input type="checkbox" name="isSkip" value="{{= d.isSkip }}" title="是|否" lay-skin="switch" lay-filter="templet-skip-midsegment-status" {{= d.isSkip == 1 ? "checked" : "" }}></div>'
 				},
@@ -282,7 +282,7 @@ window.addEventListener('message', function (e) {  // 监听 message 事件
 				{
 					field: 'startMinute',
 					title: "分钟",
-					width: 150,
+					width: '10%',
 					align: "center",
 					edit: 'text',
 					templet: '<div class="table-number-cell">{{d.startMinute}}</div>'
@@ -290,7 +290,7 @@ window.addEventListener('message', function (e) {  // 监听 message 事件
 				{
 					field: 'startSecond',
 					title: "秒",
-					width: 150,
+					width: '10%',
 					align: "center",
 					edit: 'text',
 					templet: '<div class="table-number-cell">{{d.startSecond}}</div>'

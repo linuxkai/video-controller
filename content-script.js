@@ -67,7 +67,7 @@ function getFullscreenBtnEle() {
         'www.iqiyi.com': '.screen-small',
         'v.youku.com': '.kui-fullscreen-icon-0',
         '555pian.com': '.art-control-fullscreen',
-        'www.miguvideo.com': '.zoom-btn'
+        'www.miguvideo.com': '.zoom-in'
     };
 
     if (hostname == '555pian.com') {
@@ -128,9 +128,9 @@ async function timeupdateEvent(videoEle) {
         if (nextBtn) nextBtn.click();
         setTimeout(() => {
             videoEle.currentTime = startTime;
-            fullscreenBtn = getFullscreenBtnEle();
-            if(fullscreenBtn) fullscreenBtn.click();
         }, 1000);
+        // fullscreenBtn = getFullscreenBtnEle();
+        // if(fullscreenBtn) fullscreenBtn.click();
     }
     if (res.skipMidsegmentRules) {
         list = res.skipMidsegmentRules
@@ -167,9 +167,10 @@ async function skipHeadAndEnd() {
                     videoEle.addEventListener("timeupdate", timeupdateEvent(videoEle));
                 }
             }
+        }else{
+            videoEle.addEventListener("timeupdate", timeupdateEvent(videoEle));
         }
-        videoEle.addEventListener("timeupdate", timeupdateEvent(videoEle));
-
+        
     }
 }
 
