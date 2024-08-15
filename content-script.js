@@ -8,6 +8,7 @@ let title = document.title
 if (title.indexOf("555电影") != -1) {
     hostname = "555pian.com"
 }
+console.log("当前页面域名: ",hostname)
 
 function sleep(time) {
     return new Promise((resolve) => setTimeout(resolve, time));
@@ -148,7 +149,6 @@ async function timeupdateEvent(videoEle) {
 
 
 async function skipHeadAndEnd() {
-    let videoEle = null;
     if (hostname == "555pian.com") {
         videoEle = await get555filmVideoEle()
     } else {
@@ -156,20 +156,19 @@ async function skipHeadAndEnd() {
     }
 
     if (videoEle) {
-        //清除网站自带的跳过片头，片尾功能
-        videoEle.removeEventListener("timeupdate", timeupdateEvent(videoEle));
+        videoEle.addEventListener("timeupdate", timeupdateEvent(videoEle));
 
-        if (hostname == '555pian.com') {
-            eptab = document.querySelector('div.play-tab-list.active');
-            epbtns = eptab.querySelectorAll('a.module-play-list-link');
-            for (let i = 0; i < epbtns.length; i++) {
-                epbtns[i].onclick = function () {
-                    videoEle.addEventListener("timeupdate", timeupdateEvent(videoEle));
-                }
-            }
-        }else{
-            videoEle.addEventListener("timeupdate", timeupdateEvent(videoEle));
-        }
+        // if (hostname == '555pian.com') {
+        //     eptab = document.querySelector('div.play-tab-list.active');
+        //     epbtns = eptab.querySelectorAll('a.module-play-list-link');
+        //     for (let i = 0; i < epbtns.length; i++) {
+        //         epbtns[i].onclick = function () {
+        //             videoEle.addEventListener("timeupdate", timeupdateEvent(videoEle));
+        //         }
+        //     }
+        // }else{
+        //     videoEle.addEventListener("timeupdate", timeupdateEvent(videoEle));
+        // }
         
     }
 }

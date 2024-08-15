@@ -6,7 +6,7 @@
 	"content_scripts": [
 		{
 			"matches": [
-				"https://555pian.com/*",
+				"https://*.com/vodplay/*",
 				"https://v.qq.com/*",
 				"https://www.iqiyi.com/*",
 				"https://www.bilibili.com/*",
@@ -31,5 +31,5 @@
 			"rule/rule.html"
 		]
 	},
-	"version": "1.3"
+	"version": "1.4"
 }
