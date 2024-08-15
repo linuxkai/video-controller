@@ -1,7 +1,7 @@
 {
 	"action": {
 		"default_popup": "popup.html",
-		"default_icon": "images/video-play-128.png"
+		"default_icon": "images/video_128.png"
 	},
 	"content_scripts": [
 		{
@@ -20,6 +20,12 @@
 		}
 	],
 	"description": "用来控制网页视频播放器在指定位置快进一定时长。",
+	"icons": {
+		"16": "images/video_16.png",
+		"32": "images/video_32.png",
+		"48": "images/video_48.png",
+		"128": "images/video_128.png"
+	},
 	"key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwKLO0YnW/iSdCIkbAJpTRnS3c4HBJCcsqknk6WZ9JjQByPHO9CKwDQUD7TeqrJLnSPohHC2pU2Y1eNEgzyHjlThYIXJRU0cVj6Ypve0qi4fyiZGamOEjgfHfZZZ1exG39RZ5Jpoa4g52ae8QmtJyGPseEiCz6yt+sBKI1EyauPptJpQG8FuaH5IqlKZiX1V/XRJawYyXwfqP8TUxTQDnsiDeCx7W8bWjVvam1YSKAH//20uAX91mnSCmfgkcDQbAqYuH9YW3RTzJxFG8XON2aJoNida14YbhZRxopTcuX5+vWkQq5sL1sBWSectn6dPXN8J/gIGr6HlB+rLfrqWEswIDAQAB",
 	"manifest_version": 3,
 	"name": "Video Controller",
@@ -31,5 +37,5 @@
 			"rule/rule.html"
 		]
 	},
-	"version": "1.4"
+	"version": "1.5"
 }
